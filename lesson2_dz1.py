@@ -6,18 +6,17 @@
 0,56 -> 11
 """
 
-from calendar import c
+value_ = input('Введите вещественное число: ')
 
 
-value = int(input('Введите вещественное число: '))
+def sum_(x):
+    res_ = 0
+    for i in range(len(x)):
+        if x[i] != ',':
+            res_ += int(x[i])
+        else:
+            continue
+    return res_
 
 
-def sum(x):
-    c = 0
-    while x > 0:
-        c += x % 10
-        x = x // 10
-    print(c)
-
-
-sum(value)
+print(sum_(value_))
